@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #353D41;
+  color: white;
+  font-family: "MonoHand", sans-serif;
+  font-size: 16px;
+  position: relative;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "BadaBoom", sans-serif;
+}

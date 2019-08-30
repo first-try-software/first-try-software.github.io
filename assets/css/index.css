@@ -1,0 +1,62 @@
+body {
+  background-color: #0F559F;
+  color: white;
+}
+
+header {
+  display: flex;
+  height: 60vh;
+  justify-content: center;
+}
+
+.oval {
+  background-color: #2b75d7;
+  border-radius: 50%;
+  height: 8.25em;
+  margin: 0 auto 1em;
+  position: relative;
+  width: 32em;
+}
+
+.title {
+  font-family: "BadaBoom", sans-serif;
+  font-size: 8em;
+  text-align: center;
+  text-shadow: 3px 3px black;
+  transform: rotate(-5deg);
+}
+
+.tagline {
+  font-size: 1.25em;
+  letter-spacing: 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.oval {
+  align-self: center;
+  background-color: #2b75d7;
+  border-radius: 50%;
+  height: 10.25em;
+  margin: 0 auto;
+  position: relative;
+  width: 45em;
+}
+
+.title {
+  color: white;
+  font-family: "BadaBoom", sans-serif;
+  font-size: 10em;
+  text-align: center;
+  text-shadow: 4px 4px black;
+  transform: rotate(-5deg);
+}
+
+.tagline {
+  align-self: center;
+  font-size: 1.75em;
+  letter-spacing: 10px;
+  margin-top: 1em;
+  text-align: center;
+  text-transform: uppercase;
+}
