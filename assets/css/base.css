@@ -16,3 +16,12 @@ h2,
 h3 {
   font-family: "BadaBoom", sans-serif;
 }
+
+a {
+  color: white;
+  display: inline-block;
+}
+
+a:hover {
+  color: #72a2e0;
+}

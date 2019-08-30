@@ -36,3 +36,9 @@ header {
   text-align: center;
   text-transform: uppercase;
 }
+
+.github {
+  margin-top: 3em;
+  text-align: center;
+  width: 100%
+}
