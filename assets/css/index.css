@@ -119,10 +119,6 @@ p {
   margin-bottom: 1em;
 }
 
-p.emphasis {
-  text-transform: uppercase;
-}
-
 a {
   color: white;
   display: inline-block;
