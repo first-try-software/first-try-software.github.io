@@ -1,6 +1,7 @@
 <html>
 <head>
   <title>First Try!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="assets/css/fonts.css">
   <link rel="stylesheet" type="text/css" href="assets/css/index.css">
   <link rel="stylesheet" type="text/css" href="assets/css/media.css">
@@ -17,73 +18,77 @@
     <scroll-page>
       <article id="industrialist">
         <h1>The Factory Pattern</h1>
-        <h2>Factories build things.<br>Industrialist builds factories.</h2>
-        <p>In object oriented design, a factory is a method or class whose
-          only responsibility is to build objects of a particular type. So,
-          an AutomobileFactory would be responsible for building Automobile
-          objects.
-        </p>
-        <p>Factories are often implemented as switch statements. But doing
-          so requires you to hard code the keys in the factory, either in
-          the switch statement, or as a hash. So, whenever you need to add
-          a class to the factory, you have to modify the factory. This is a
-          violation of the Open/Closed Principle which states that classes
-          should be open for extension, but closed for modification.
-        </p>
-        <p>One way to resolve this problem in Ruby is to use metaprogramming.
-          In this approach, you define a convention for converting a key
-          into a class name (e.g. :sedan maps to Sedan). Unfotunately, if
-          your keys and class names don't lend themselves to a convention
-          (e.g. :convertible maps to Cabriolet), then you won't be able to
-          use this technique. Furthermore, if your convention ever changes,
-          you'll have to modify the factory, which again is a violation of
-          the Open/Closed Principle.
-        </p>
-        <p>Industrialist is a gem that solves this problem. It allows classes
-          to register themselves as "manufacturable" by a specific factory
-          when Ruby loads the file. Industrialist can manage any number of
-          factories. It supports defaults, so if a factory is passed a key
-          it does not recognize, it can still build an appropriate object.
-          A single class can be registered under multiple keys. And, keys
-          can be any Ruby object, including hashes, making Industrialist
-          factories super flexible.
-        </p>
-        <p>Check out Industrialst on <a href="https://github.com/entelo/industrialist">GitHub</a>.</p>
+        <h2>Factories build things. Industrialist builds factories.</h2>
+        <section>
+          <p>In object oriented design, a factory is a method or class whose
+            only responsibility is to build objects of a particular type. So,
+            an AutomobileFactory would be responsible for building Automobile
+            objects.
+          </p>
+          <p>Factories are often implemented as switch statements. But doing
+            so requires you to hard code the keys in the factory, either in
+            the switch statement, or as a hash. So, whenever you need to add
+            a class to the factory, you have to modify the factory. This is a
+            violation of the Open/Closed Principle which states that classes
+            should be open for extension, but closed for modification.
+          </p>
+          <p>One way to resolve this problem in Ruby is to use metaprogramming.
+            In this approach, you define a convention for converting a key
+            into a class name (e.g. :sedan maps to Sedan). Unfotunately, if
+            your keys and class names don't lend themselves to a convention
+            (e.g. :convertible maps to Cabriolet), then you won't be able to
+            use this technique. Furthermore, if your convention ever changes,
+            you'll have to modify the factory, which again is a violation of
+            the Open/Closed Principle.
+          </p>
+          <p>Industrialist is a gem that solves this problem. It allows classes
+            to register themselves as "manufacturable" by a specific factory
+            when Ruby loads the file. Industrialist can manage any number of
+            factories. It supports defaults, so if a factory is passed a key
+            it does not recognize, it can still build an appropriate object.
+            A single class can be registered under multiple keys. And, keys
+            can be any Ruby object, including hashes, making Industrialist
+            factories super flexible.
+          </p>
+          <p>Check out Industrialst on <a href="https://github.com/entelo/industrialist">GitHub</a>.</p>
+        </section>
       </article>
       <a class="next" href="#hexagonal-rails"></a>
     </scroll-page>
     <scroll-page>
       <article id="hexagonal-rails">
         <h1>Hexagonal Rails</h1>
-        <h2>Architecturally sound.<br>Rapid application development.</h2>
-        <p>Ruby on Rails is famous for rapid application development. It is super
-          quick and easy to setup a Rails application with some basic functionality.
-          So much so, that Rails was the darling of startups for years.
-        </p>
-        <p>But, Rails is also famous for applications that grow unweildy over time
-          and become inflexible to change. This rigidity is caused by Rails' numerous
-          violations of basic object oriented design principles.
-        </p>
-        <p>When classes have more than one responsibility, they become harder to test.
-          This makes it more difficult to reason about the class. As a result, the
-          classes will have lower test coverage, higher churn, and more bugs.
-        </p>
-        <p>When classes are written in such a way so that extending them requires
-          them to be modified directly, you introduce higher churn and more bugs.
-        </p>
-        <p>When classes take references to concrete objects rather than relying
-          on interfaces (or duck types in Ruby), they will be much harder to test,
-          leading to lower coverage and more bugs.
-        </p>
-        <p class="emphasis">A typical Rails controller violates all of these principles.</p>
-        <p>Fortunately, there are architectural patterns that can resolve these
-          issues. The Ports &amp; Adapters pattern (also known as hexagonal architecture)
-          is one such pattern. It makes heavy use of the Single Responsibility Principle,
-          the Open/Closed Principle, and the Dependency Inversion Principle.
-        </p>
-        <p>Our software uses this approach to keep our applications nimble and
-          resilient to change.
-        </p>
+        <h2>Architecturally sound. Rapid application development.</h2>
+        <section>
+          <p>Ruby on Rails is famous for rapid application development. It is super
+            quick and easy to setup a Rails application with some basic functionality.
+            So much so, that Rails was the darling of startups for years.
+          </p>
+          <p>But, Rails is also famous for applications that grow unweildy over time
+            and become inflexible to change. This rigidity is caused by Rails' numerous
+            violations of basic object oriented design principles.
+          </p>
+          <p>When classes have more than one responsibility, they become harder to test.
+            This makes it more difficult to reason about the class. As a result, the
+            classes will have lower test coverage, higher churn, and more bugs.
+          </p>
+          <p>When classes are written in such a way so that extending them requires
+            them to be modified directly, you introduce higher churn and more bugs.
+          </p>
+          <p>When classes take references to concrete objects rather than relying
+            on interfaces (or duck types in Ruby), they will be much harder to test,
+            leading to lower coverage and more bugs.
+          </p>
+          <p class="emphasis">A typical Rails controller violates all of these principles.</p>
+          <p>Fortunately, there are architectural patterns that can resolve these
+            issues. The Ports &amp; Adapters pattern (also known as hexagonal architecture)
+            is one such pattern. It makes heavy use of the Single Responsibility Principle,
+            the Open/Closed Principle, and the Dependency Inversion Principle.
+          </p>
+          <p>Our software uses this approach to keep our applications nimble and
+            resilient to change.
+          </p>
+        </section>
       </article>
       <a class="prev" href="#"></a>
     </scroll-page>
