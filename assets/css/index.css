@@ -18,13 +18,13 @@ scroll-container {
 scroll-page {
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 2em);
   justify-content: space-between;
+  min-height: calc(100vh - 2em);
   padding: 0 2em 2em;
 }
 
 scroll-page:first-child {
-  height: calc(100vh - 20vh - 2em);
+  min-height: calc(100vh - 20vh - 2em);
   padding: 20vh 2em 2em;
 }
 
@@ -66,10 +66,9 @@ header {
 }
 
 article {
-  height: calc(100vh - 4em);
   margin: 0 auto;
   max-width: 960px;
-  padding: 2em;
+  padding: 4em 2em 0;
   width: 100vh - 6em;
 }
 
