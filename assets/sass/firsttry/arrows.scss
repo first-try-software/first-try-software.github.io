@@ -1,0 +1,28 @@
+.arrow {
+  align-self: center;
+  border-left: 0.75em solid transparent;
+  border-right: 0.75em solid transparent;
+  display: block;
+  height: 0;
+  width: 0;
+}
+
+.next {
+  border-top: 0.75em solid $color-primary;
+}
+
+.prev {
+  border-bottom: 0.75em solid $color-primary;
+}
+
+a.next:hover {
+  border-top-color: $color-secondary;
+}
+
+a.prev:hover {
+  border-bottom-color: $color-secondary;
+}
+
+.bounce-5s {
+  animation: bounce 1.4s cubic-bezier(.5, 0.05, 1, .5) 5s 3;
+}

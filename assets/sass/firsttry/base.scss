@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: none;
+}
+
+body {
+  background-color: $background-color-primary;
+  color: $color-primary;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+}

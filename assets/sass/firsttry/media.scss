@@ -1,0 +1,58 @@
+// $screen-width px
+// $columns int
+// $font-size-title em
+// $font-size-tagline em
+// $font-size-h1 em
+// $font-size-h2 em
+// $font-size-body em
+// $shadow px
+// $outline px
+// $spacing-tagline px
+// $max-width px
+
+@include min-query(1281px, 2, 18em,   3em, 5.5em, 1.75em,  1.25em, 5px, 3px, 8px, 960px);
+@include max-query(1280px, 2, 12em,   2em, 5.5em, 1.75em, 1.125em, 3px, 2px, 6px, 960px);
+@include max-query(1194px, 2, 12em,   2em, 5.5em, 1.75em,     1em, 3px, 2px, 6px, $width-full);
+@include max-query(1024px, 2, 12em,   2em, 5.5em, 1.75em,     1em, 3px, 2px, 6px, $width-full);
+@include max-query( 896px, 2,  8em, 1.5em, 4.5em,  1.5em,     1em, 3px, 1px, 4px, $width-full);
+@include max-query( 667px, 1,  5em,   1em,   3em, 1.25em,     1em, 2px, 1px, 2px, $width-full);
+@include max-query( 320px, 1,  4em,   1em, 2.5em, 1.25em,     1em, 2px, 1px, 2px, $width-full);
+
+// iPhone
+@media only screen and (max-width : 667px) and (orientation: landscape) {
+  scroll-page:first-child .next {
+    margin-bottom: 2em;
+  }
+}
+
+@media only screen and (max-width : 667px) and (orientation: portrait) {
+  scroll-page:first-child .next {
+    margin-bottom: 4em;
+  }
+}
+
+// iPad
+@media only screen and (max-width : 1024px) and (orientation: landscape) {
+  scroll-page:first-child .next {
+    margin-bottom: 4em;
+  }
+}
+
+@media only screen and (max-width : 1024px) and (orientation: portrait) {
+  .next, .prev {
+    margin-bottom: 4em;
+  }
+}
+
+// iPad Pro
+@media only screen and (max-width : 1194px) and (orientation: landscape) {
+  .next, .prev {
+    margin-bottom: 4em;
+  }
+}
+
+@media only screen and (max-width : 1194px) and (orientation: portrait) {
+  .next, .prev {
+    margin-bottom: 4em;
+  }
+}

@@ -1,0 +1,59 @@
+scroll-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: calc(#{$min-height-default} - #{$padding-default});
+  padding: 0 $padding-default $padding-default;
+}
+
+scroll-page:first-child {
+  min-height: calc(#{$min-height-default} - #{$padding-top-header} - #{$padding-default});
+  padding: $padding-top-header $padding-default $padding-default;
+}
+
+scroll-page:nth-child(odd) {
+  background-color: $background-color-primary;
+}
+
+scroll-page:nth-child(even) {
+  background-color: $background-color-secondary;
+}
+
+article {
+  margin: 0 auto;
+  max-width: $max-width-default;
+  padding: calc(#{$padding-default} * 2) $padding-default 0;
+  width: calc(#{$width-default} - calc(#{$padding-default} * 3));
+}
+
+section {
+  columns: $columns-default;
+  column-gap: $padding-default;
+  padding: $padding-half 0;
+}
+
+h1 {
+  filter: drop-shadow(2px 2px 0 $color-drop-shadow);
+  font-family: "BadaBoom", sans-serif;
+  margin-bottom: 0.25em;
+  transform: rotate(-2.5deg);
+}
+
+h2 {
+  color: $color-secondary;
+  font-family: "MonoHand", sans-serif;
+  text-transform: uppercase;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+a {
+  color: $color-primary;
+  display: inline-block;
+}
+
+a:hover {
+  color: $color-secondary;
+}
