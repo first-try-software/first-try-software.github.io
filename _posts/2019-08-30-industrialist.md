@@ -14,4 +14,6 @@ One way to resolve this problem in Ruby is to use metaprogramming. In this appro
 
 Industrialist is a gem that solves this problem. It allows classes to register themselves as "manufacturable" by a specific factory when Ruby loads the file. Industrialist can manage any number of factories. It supports defaults, so if a factory is passed a key it does not recognize, it can still build an appropriate object. A single class can be registered under multiple keys. And, keys can be any Ruby object, including hashes, making Industrialist factories super flexible.
 
-Check out Industrialst on [GitHub](https://github.com/entelo/industrialist).
+For more on extension without modification, check out [Extenstion without Modification](https://engineering.entelo.com/extension-without-modification-cb0f9cfb64a3).
+
+And, then go see Industrialst on [GitHub](https://github.com/entelo/industrialist).
