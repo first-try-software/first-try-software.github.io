@@ -1,3 +1,6 @@
+---
+---
+
 $background-color-primary: #0F559F;
 $background-color-secondary: #353D41;
 $background-color-header: #2b75d7;
@@ -89,10 +92,10 @@ $width-full: calc(#{width-default} - #{$padding-twice});
 
 
 @import
-  "firsttry/fonts",
-  "firsttry/base",
-  "firsttry/keyframes",
-  "firsttry/layout",
-  "firsttry/header",
-  "firsttry/arrows",
-  "firsttry/media"
+  "fonts",
+  "base",
+  "keyframes",
+  "layout",
+  "header",
+  "arrows",
+  "media"
