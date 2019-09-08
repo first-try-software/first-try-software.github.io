@@ -1,11 +1,8 @@
 .oval {
   background-color: $background-color-header;
   border-radius: 50%;
-  margin: 0 auto;
+  margin: $padding-main-header auto 0;
   position: relative;
-
-  // height: 12.25em;
-  // width: 48em;
 }
 
 .title {
@@ -13,10 +10,6 @@
   font-family: "BadaBoom", sans-serif;
   text-align: center;
   transform: rotate(-5deg);
-
-  // font-size: 12em;
-  // @include drop-shadow(3px, 0, $color-drop-shadow);
-  // @include text-outline(1px, 1px, $color-drop-shadow);
 }
 
 .tagline {
@@ -24,7 +17,4 @@
   margin-top: 1em;
   text-align: center;
   text-transform: uppercase;
-
-  // font-size: 2em;
-  // letter-spacing: 10px;
 }

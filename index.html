@@ -2,20 +2,29 @@
 layout: default
 title: First Try!
 ---
-
-{% for post in site.posts %}
+<scroll-container>
   <scroll-page>
-    <article id="{{ post.slug }}">
-      <h1>{{ post.title }}</h1>
-      <h2>{{ post.subtitle }}</h2>
-      <section>
-        {{ post.content }}
-      </section>
-    </article>
-    {% if post.slug == site.posts.last.slug %}
-      <a class="arrow prev" href="#"></a>
-    {% else %}
-      <a class="arrow next" href="#{{ post.previous.slug }}"></a>
-    {% endif %}
+    <div class="oval">
+      <div class="title">{{ site.name }}</div>
+      <div class="tagline">{{ site.tagline }}</div>
+    </div>
+    <a class="arrow down bounce-5s" href="#{{ site.posts.first.slug }}"></a>
   </scroll-page>
-{% endfor %}
+
+  {% for post in site.posts %}
+    <scroll-page id="{{ post.slug }}">
+      <article>
+        <h1>{{ post.title }}</h1>
+        <h2>{{ post.subtitle }}</h2>
+        <section>
+          {{ post.content }}
+        </section>
+      </article>
+      {% if post.slug == site.posts.last.slug %}
+        <a class="arrow up" href="#"></a>
+      {% else %}
+        <a class="arrow down" href="#{{ post.previous.slug }}"></a>
+      {% endif %}
+    </scroll-page>
+  {% endfor %}
+</scroll-container>

@@ -20,4 +20,4 @@ _A typical Rails controller violates all of these principles._
 
 Fortunately, there are architectural patterns that can resolve these issues. The Ports &amp; Adapters pattern (also known as hexagonal architecture) is one such pattern. It makes heavy use of the Single Responsibility Principle, the Open/Closed Principle, and the Dependency Inversion Principle, making it a more resilient choice than traditional Rails architecture.
 
-For more on hexagonal architecture and some example Rails code, check out [Making Sense of Your Rails Monolith](https://engineering.entelo.com/making-sense-of-your-rails-monolith-ea54692241c3).
+For more on hexagonal architecture and some example Rails code, read [Making Sense of Your Rails Monolith](https://engineering.entelo.com/making-sense-of-your-rails-monolith-ea54692241c3).

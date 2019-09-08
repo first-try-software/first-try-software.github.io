@@ -1,26 +1,54 @@
 .arrow {
   align-self: center;
-  border-left: 0.75em solid transparent;
-  border-right: 0.75em solid transparent;
   display: block;
   height: 0;
   width: 0;
-}
 
-.next {
-  border-top: 0.75em solid $color-primary;
-}
+  &.down {
+    border-left: 0.75em solid transparent;
+    border-right: 0.75em solid transparent;
+    border-top: 0.75em solid $color-primary;
 
-.prev {
-  border-bottom: 0.75em solid $color-primary;
-}
+    &:hover {
+      border-top-color: $color-secondary;
+    }
+  }
 
-a.next:hover {
-  border-top-color: $color-secondary;
-}
+  &.up {
+    border-left: 0.75em solid transparent;
+    border-right: 0.75em solid transparent;
+    border-bottom: 0.75em solid $color-primary;
 
-a.prev:hover {
-  border-bottom-color: $color-secondary;
+    &:hover {
+      border-bottom-color: $color-secondary;
+    }
+  }
+
+  &.left {
+    border-bottom: 0.75em solid transparent;
+    border-top: 0.75em solid transparent;
+    border-right: 0.75em solid $color-primary;
+    left: calc(#{$padding-default} + #{$padding-half});
+    position: fixed;
+    top: 50vh;
+
+    &:hover {
+      border-right: 0.75em solid $color-secondary;
+    }
+  }
+
+  &.right {
+    border-bottom: 0.75em solid transparent;
+    border-top: 0.75em solid transparent;
+    border-left: 0.75em solid $color-primary;
+    position: fixed;
+    right: calc(#{$padding-default} + #{$padding-half});
+    top: 50vh;
+
+    &:hover {
+      border-left: 0.75em solid $color-secondary;
+    }
+  }
 }
 
 .bounce-5s {

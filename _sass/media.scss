@@ -10,7 +10,7 @@
 // $spacing-tagline px
 // $max-width px
 
-@include min-query(1281px, 2, 18em,   3em, 5.5em, 1.75em,  1.25em, 5px, 3px, 8px, 960px);
+@include min-query(1281px, 2, 18em,   3em, 5.5em, 1.75em,   1.2em, 5px, 3px, 8px, 960px);
 @include max-query(1280px, 2, 12em,   2em, 5.5em, 1.75em, 1.125em, 3px, 2px, 6px, 960px);
 @include max-query(1194px, 2, 12em,   2em, 5.5em, 1.75em,     1em, 3px, 2px, 6px, $width-full);
 @include max-query(1024px, 2, 12em,   2em, 5.5em, 1.75em,     1em, 3px, 2px, 6px, $width-full);

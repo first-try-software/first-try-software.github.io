@@ -1,14 +1,15 @@
 scroll-page {
+  border: $padding-half solid $color-primary;
+  border-bottom: none;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: calc(#{$min-height-default} - #{$padding-default});
+  min-height: calc(#{$min-height-default} - #{$padding-default} - #{$padding-default});
   padding: 0 $padding-default $padding-default;
 }
 
 scroll-page:first-child {
-  min-height: calc(#{$min-height-default} - #{$padding-top-header} - #{$padding-default});
-  padding: $padding-top-header $padding-default $padding-default;
+  min-height: calc(#{$min-height-default} - #{$padding-twice});
 }
 
 scroll-page:nth-child(odd) {
@@ -30,6 +31,32 @@ section {
   columns: $columns-default;
   column-gap: $padding-default;
   padding: $padding-half 0;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: $padding-half;
+
+  a {
+    color: $background-color-primary;
+    font-family: "MonoHand", sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      margin: 0 $padding-half;
+    }
+  }
 }
 
 h1 {

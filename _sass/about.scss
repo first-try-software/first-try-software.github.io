@@ -1,0 +1,114 @@
+#about {
+  border: $padding-half solid $color-primary;
+  border-bottom: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: calc(#{$min-height-default} - calc(#{$padding-default} * 3));
+  padding: $padding-default 0 0;
+
+  header {
+    background-color: $background-color-header;
+    border-radius: 50%;
+    height: 6.2em;
+    margin: 2em auto;
+    width: 32em;
+
+    h1 {
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+
+  .bios {
+    display: flex;
+    justify-content: center;
+  }
+
+  .bio {
+    display: flex;
+    flex-direction: column;
+    font-size: 1em;
+    justify-content: end;
+    margin: 0 2em;
+    width: 12em;
+
+    h1 {
+      font-size: 3em;
+      letter-spacing: 2px;
+    }
+
+    h2 {
+      font-size: 1.25em;
+    }
+
+    img {
+      border: 3px solid $color-primary;
+      border-radius: 3px;
+      margin: 0.5em 0;
+
+      &:hover {
+        border-color: $color-secondary;
+      }
+
+      &:hover + .bubble {
+        display: flex;
+      }
+    }
+  }
+
+  .bubble {
+    background-color: $color-primary;
+    border-radius: 50%;
+    color: $background-color-secondary;
+    display: none;
+    flex-direction: column;
+    font-family: "MonoHand", sans-serif;
+    font-size: 1.125em;
+    height: 8em;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    top: -2.5em;
+    width: 16em;
+
+    @include drop-shadow(5px, 0, $color-drop-shadow);
+  }
+
+  .bubble-down {
+    left: -6.5em;
+    transform: rotate(15deg);
+  }
+
+  .bubble-up {
+    right: -1.5em;
+    transform: rotate(-15deg);
+  }
+
+  .bubble-down:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-right: 10px solid $color-primary;
+    border-left  : 10px solid transparent;
+    border-bottom: 10px solid $color-primary;
+    border-top: 10px solid transparent;
+    right: 7em;
+    top: -1em;
+  }
+
+  .bubble-up:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 10px solid $color-primary;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid $color-primary;
+    border-top: 10px solid transparent;
+    left: 7em;
+    top: -1em;
+  }
+}
