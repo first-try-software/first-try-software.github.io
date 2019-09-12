@@ -1,19 +1,13 @@
 #about {
-  border: $padding-half solid $color-primary;
   border-bottom: none;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  height: calc(#{$min-height-default} - calc(#{$padding-default} * 3));
-  min-height: calc(#{$min-height-default} - calc(#{$padding-default} * 3));
-  padding: $padding-default 0 0;
 
   header {
     background-color: $background-color-header;
     border-radius: 50%;
-    height: 6.25em;
     margin: 2em auto;
-    width: 32em;
 
     h1 {
       margin: 0 auto;
@@ -23,6 +17,7 @@
 
   .bios {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
   }
 
@@ -31,7 +26,7 @@
     flex-direction: column;
     font-size: 1em;
     justify-content: end;
-    margin: 0 2em;
+    margin: 0 2em 3em;
     width: 13em;
 
     h1 {

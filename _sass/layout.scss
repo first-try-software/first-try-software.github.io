@@ -1,15 +1,9 @@
 scroll-page {
-  border: $padding-half solid $color-primary;
-  border-bottom: none;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: calc(#{$min-height-default} - #{$padding-default} - #{$padding-default});
-  padding: 0 $padding-default $padding-default;
-}
-
-scroll-page:first-child {
-  min-height: calc(#{$min-height-default} - #{$padding-twice});
+  min-height: calc(#{$min-height-default} - #{$padding-twice} - #{$padding-twice});
+  padding: $padding-default;
 }
 
 scroll-page:nth-child(odd) {
@@ -24,10 +18,18 @@ scroll-page:nth-child(even) {
   border-bottom: none;
 }
 
+scroll-page:first-child {
+  min-height: calc(#{$min-height-default} - calc(#{$padding-default} * 4));
+  border-bottom: none;
+}
+
+scroll-page:last-child {
+  padding-bottom: calc(#{$padding-default} * 2.5)
+}
+
 article {
   margin: 0 auto;
   max-width: $max-width-default;
-  padding: calc(#{$padding-default} * 2) $padding-default 0;
   width: calc(#{$width-default} - calc(#{$padding-default} * 3));
 }
 
@@ -38,9 +40,15 @@ section {
 }
 
 footer {
+  background-color: $color-primary;
+  border: $padding-half solid $color-primary;
+  bottom: 0px;
   display: flex;
-  justify-content: center;
-  padding: $padding-half;
+  font-size: 0.75em;
+  position: fixed;
+  text-align: center;
+  width: calc(100vw - #{$padding-default});
+  z-index: 100;
 
   a {
     color: $background-color-primary;
@@ -53,7 +61,7 @@ footer {
 
   ul {
     list-style: none;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
 
     li {

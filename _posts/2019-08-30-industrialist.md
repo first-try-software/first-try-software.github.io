@@ -16,4 +16,4 @@ Industrialist is a gem that solves this problem. It allows classes to register t
 
 For more on extension without modification, check out [Extenstion without Modification](https://engineering.entelo.com/extension-without-modification-cb0f9cfb64a3).
 
-And, then go see Industrialst on [GitHub](https://github.com/entelo/industrialist).
+And, then go look at [Industrialst on GitHub](https://github.com/entelo/industrialist).

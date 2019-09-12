@@ -71,9 +71,8 @@ $width-full: calc(#{width-default} - #{$padding-twice});
   }
 
   article {
-    padding: $padding-default 0 0;
     max-width: $max-width;
-    width: calc(100vw - #{$padding-twice} - #{padding-default});
+    width: calc(100vw - calc(#{$padding-twice} * 2));
   }
 
   h1 {
@@ -92,6 +91,17 @@ $width-full: calc(#{width-default} - #{$padding-twice});
 
   section {
     columns: $columns;
+  }
+
+  #about {
+    header {
+      height: calc(#{$font-size-h1} * 1.375);
+      width: calc(#{$font-size-h1} * 8);
+
+      h1 {
+        font-size: calc(#{$font-size-h1} * 1.25);
+      }
+    }
   }
 }
 
