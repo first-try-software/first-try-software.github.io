@@ -14,10 +14,14 @@ scroll-page:first-child {
 
 scroll-page:nth-child(odd) {
   background-color: $background-color-primary;
+  border: $padding-half solid $background-color-primary;
+  border-bottom: none;
 }
 
 scroll-page:nth-child(even) {
   background-color: $background-color-secondary;
+  border: $padding-half solid $background-color-secondary;
+  border-bottom: none;
 }
 
 article {

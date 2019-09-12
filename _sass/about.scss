@@ -5,12 +5,13 @@
   flex-direction: column;
   justify-content: flex-start;
   height: calc(#{$min-height-default} - calc(#{$padding-default} * 3));
+  min-height: calc(#{$min-height-default} - calc(#{$padding-default} * 3));
   padding: $padding-default 0 0;
 
   header {
     background-color: $background-color-header;
     border-radius: 50%;
-    height: 6.2em;
+    height: 6.25em;
     margin: 2em auto;
     width: 32em;
 
@@ -31,7 +32,7 @@
     font-size: 1em;
     justify-content: end;
     margin: 0 2em;
-    width: 12em;
+    width: 13em;
 
     h1 {
       font-size: 3em;
@@ -47,12 +48,21 @@
       border-radius: 3px;
       margin: 0.5em 0;
 
-      &:hover {
-        border-color: $color-secondary;
-      }
-
       &:hover + .bubble {
         display: flex;
+      }
+    }
+
+    ul {
+      margin: 0 0 0 1em;
+      padding: 0;
+      position: absolute;
+      top: 33em;
+
+      h3 {
+        font-family: "MonoHand", sans-serif;
+        margin: 0.5em 0 0 -1em;
+        text-transform: uppercase;
       }
     }
   }
@@ -64,16 +74,21 @@
     display: none;
     flex-direction: column;
     font-family: "MonoHand", sans-serif;
-    font-size: 1.125em;
-    height: 8em;
+    font-size: 1em;
+    height: 9em;
     justify-content: center;
     position: relative;
     text-align: center;
     text-transform: uppercase;
     top: -2.5em;
-    width: 16em;
+    width: 17em;
+    z-index: 1;
 
     @include drop-shadow(5px, 0, $color-drop-shadow);
+
+    &:hover {
+      display: flex;
+    }
   }
 
   .bubble-down {
@@ -84,6 +99,11 @@
   .bubble-up {
     right: -1.5em;
     transform: rotate(-15deg);
+  }
+
+  .bubble-middle {
+    right: 2em;
+    top: -2em;
   }
 
   .bubble-down:before {
@@ -110,5 +130,18 @@
     border-top: 10px solid transparent;
     left: 7em;
     top: -1em;
+  }
+
+  .bubble-middle:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 20px solid $color-primary;
+    border-top: 20px solid transparent;
+    left: 7em;
+    top: -2em;
   }
 }
