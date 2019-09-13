@@ -1,0 +1,78 @@
+@mixin drop-shadow($drop, $blur, $color) {
+  filter: drop-shadow($drop $drop $blur $color);
+}
+
+@mixin text-outline($line-width, $blur, $color) {
+  text-shadow: 0px calc(#{$line-width} * -1) $blur $color,
+  0px $line-width $blur $color,
+  $line-width 0px $blur $color,
+  calc(#{$line-width} * -1) 0px $blur $color;
+}
+
+@mixin max-query($screen-width, $columns, $font-size-title, $font-size-tagline, $font-size-h1, $font-size-h2, $font-size-body, $shadow, $outline, $spacing-tagline, $max-width) {
+  @media only screen and (max-width: $screen-width) {
+    @include scale-layout($columns, $font-size-title, $font-size-tagline, $font-size-h1, $font-size-h2, $font-size-body, $shadow, $outline, $spacing-tagline, $max-width);
+  }
+}
+
+@mixin min-query($screen-width, $columns, $font-size-title, $font-size-tagline, $font-size-h1, $font-size-h2, $font-size-body, $shadow, $outline, $spacing-tagline, $max-width) {
+  @media only screen and (min-width: $screen-width) {
+    @include scale-layout($columns, $font-size-title, $font-size-tagline, $font-size-h1, $font-size-h2, $font-size-body, $shadow, $outline, $spacing-tagline, $max-width);
+  }
+}
+
+@mixin scale-layout($columns, $font-size-title, $font-size-tagline, $font-size-h1, $font-size-h2, $font-size-body, $shadow, $outline, $spacing-tagline, $max-width) {
+  .oval {
+    height: calc(#{$font-size-title} * 1.05);
+    width: calc(#{$font-size-title} * 4);
+  }
+
+  .title {
+    font-size: $font-size-title;
+    @include drop-shadow($shadow, 0, $color-drop-shadow);
+    @include text-outline($outline, 1px, $color-drop-shadow);
+  }
+
+  .tagline {
+    font-size: $font-size-tagline;
+    letter-spacing: $spacing-tagline;
+  }
+
+  scroll-page {
+    padding: $padding-default calc(#{$padding-half} * #{$columns});
+  }
+
+  article {
+    max-width: $max-width;
+    width: calc(100vw - calc(#{$padding-default} * #{$columns} * 2));
+  }
+
+  h1 {
+    font-size: $font-size-h1;
+    letter-spacing: $shadow;
+    margin-bottom: 0.25em;
+  }
+
+  h2 {
+    font-size: $font-size-h2;
+  }
+
+  p {
+    font-size: $font-size-body;
+  }
+
+  section {
+    columns: $columns;
+  }
+
+  #about {
+    header {
+      height: calc(#{$font-size-h1} * 1.1);
+      width: calc(#{$font-size-h1} * 6);
+
+      h1 {
+        font-size: $font-size-h1;
+      }
+    }
+  }
+}

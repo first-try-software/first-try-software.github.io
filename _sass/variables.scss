@@ -1,0 +1,28 @@
+$background-color-default: #fff;
+$background-color-primary: #0F559F;
+$background-color-secondary: #353D41;
+$background-color-header: #2b75d7;
+
+$border-default: 16px;
+$border-twice: calc($border-default * 2);
+
+$color-primary: #fff;
+$color-secondary: #72a2e0;
+$color-drop-shadow: #000;
+
+$columns-default: 2;
+$columns-narrow-screen: 1;
+
+$max-width-default: 960px;
+$max-width-narrow-screen: 100vw;
+
+$min-height-default: 100vh;
+
+$padding-default: 32px;
+$padding-half: $padding-default / 2;
+$padding-quarter: $padding-half / 2;
+$padding-twice: $padding-default * 2;
+$padding-main-header: 20vh;
+
+$width-default: 100vw;
+$width-full: calc(#{width-default} - #{$padding-twice});

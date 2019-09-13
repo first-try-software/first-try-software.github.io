@@ -1,26 +1,24 @@
 scroll-page {
+  border-bottom: none;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: calc(#{$min-height-default} - #{$padding-twice} - #{$padding-twice});
+  min-height: calc(#{$min-height-default} - #{$padding-twice});
   padding: $padding-default;
 }
 
 scroll-page:nth-child(odd) {
   background-color: $background-color-primary;
   border: $padding-half solid $background-color-primary;
-  border-bottom: none;
 }
 
 scroll-page:nth-child(even) {
   background-color: $background-color-secondary;
   border: $padding-half solid $background-color-secondary;
-  border-bottom: none;
 }
 
 scroll-page:first-child {
-  min-height: calc(#{$min-height-default} - calc(#{$padding-default} * 4));
-  border-bottom: none;
+  min-height: calc(#{$min-height-default} - #{$padding-twice});
 }
 
 scroll-page:last-child {
@@ -30,7 +28,7 @@ scroll-page:last-child {
 article {
   margin: 0 auto;
   max-width: $max-width-default;
-  width: calc(#{$width-default} - calc(#{$padding-default} * 3));
+  width: calc(#{$width-default} - calc(#{$padding-default} * 6));
 }
 
 section {
@@ -40,35 +38,10 @@ section {
 }
 
 footer {
-  background-color: $color-primary;
-  border: $padding-half solid $color-primary;
-  bottom: 0px;
+  background-color: $background-color-primary;
+  border: $padding-half solid $background-color-primary;
   display: flex;
-  font-size: 0.75em;
-  position: fixed;
-  text-align: center;
-  width: calc(100vw - #{$padding-default});
-  z-index: 100;
-
-  a {
-    color: $background-color-primary;
-    font-family: "MonoHand", sans-serif;
-    font-size: 1em;
-    font-weight: bold;
-    text-decoration: none;
-    text-transform: uppercase;
-  }
-
-  ul {
-    list-style: none;
-    margin: 0 auto;
-    padding: 0;
-
-    li {
-      display: inline-block;
-      margin: 0 $padding-half;
-    }
-  }
+  justify-content: center;
 }
 
 h1 {
