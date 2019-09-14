@@ -1,16 +1,16 @@
 @font-face {
   font-family: 'BadaBoom';
-  src: url('../fonts/badaboom.woff') format('woff');
+  src: url('/fonts/badaboom.woff') format('woff');
 }
 
 @font-face {
   font-family: 'MonoHand';
-  src: url('../fonts/monohand.woff') format('woff');
+  src: url('/fonts/monohand.woff') format('woff');
 }
 
 @font-face {
   font-family: 'PT Sans';
   font-style: normal;
   font-weight: normal;
-  src: local('PT Sans'), url('../fonts/ptsans.woff') format('woff');
+  src: local('PT Sans'), url('/fonts/ptsans.woff') format('woff');
 }

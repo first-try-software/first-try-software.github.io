@@ -23,32 +23,6 @@
       border-bottom-color: $color-secondary;
     }
   }
-
-  &.left {
-    border-bottom: 0.75em solid transparent;
-    border-top: 0.75em solid transparent;
-    border-right: 0.75em solid $color-primary;
-    left: calc(#{$padding-default} + #{$padding-half});
-    position: fixed;
-    top: 50vh;
-
-    &:hover {
-      border-right: 0.75em solid $color-secondary;
-    }
-  }
-
-  &.right {
-    border-bottom: 0.75em solid transparent;
-    border-top: 0.75em solid transparent;
-    border-left: 0.75em solid $color-primary;
-    position: fixed;
-    right: calc(#{$padding-default} + #{$padding-half});
-    top: 50vh;
-
-    &:hover {
-      border-left: 0.75em solid $color-secondary;
-    }
-  }
 }
 
 .bounce-5s {

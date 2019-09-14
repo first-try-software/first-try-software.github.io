@@ -1,20 +1,22 @@
-.oval {
-  background-color: $background-color-header;
-  border-radius: 50%;
-  margin: $padding-main-header auto 0;
-  position: relative;
-}
+scroll-page:first-child {
+  .oval {
+    background-color: $background-color-header;
+    border-radius: 50%;
+    margin: $margin-home-header auto 0;
+    position: relative;
+  }
 
-.title {
-  animation: slam 0.5s ease 1;
-  font-family: "BadaBoom", sans-serif;
-  text-align: center;
-  transform: rotate(-5deg);
-}
+  .title {
+    animation: slam 0.5s ease 1;
+    font-family: "BadaBoom", sans-serif;
+    text-align: center;
+    transform: rotate(-5deg);
+  }
 
-.tagline {
-  font-family: "MonoHand", sans-serif;
-  margin-top: 1em;
-  text-align: center;
-  text-transform: uppercase;
+  .tagline {
+    font-family: "MonoHand", sans-serif;
+    margin-top: 1em;
+    text-align: center;
+    text-transform: uppercase;
+  }
 }

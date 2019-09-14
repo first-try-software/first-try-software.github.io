@@ -10,24 +10,39 @@
 // $spacing-tagline px
 // $max-width px
 
-@include min-query(1281px, 2, 14em, 2.25em, 5.5em, 1.75em,   1.2em, 5px, 3px, 8px, 960px);
-@include max-query(1280px, 2, 12em,    2em, 5.5em, 1.75em, 1.125em, 3px, 2px, 6px, 960px);
-@include max-query(1194px, 2, 12em,    2em, 5.5em, 1.75em,     1em, 3px, 2px, 6px, $width-full);
-@include max-query(1024px, 2, 12em,    2em, 5.5em, 1.75em,     1em, 3px, 2px, 6px, $width-full);
-@include max-query( 896px, 2,  8em,  1.5em, 4.5em,  1.5em,     1em, 3px, 1px, 4px, $width-full);
-@include max-query( 667px, 1,  5em,    1em,   3em, 1.25em,     1em, 2px, 1px, 2px, $width-full);
-@include max-query( 320px, 1,  4em,    1em,   2em, 1.25em,     1em, 2px, 1px, 2px, $width-full);
+@include min-query(1281px, $columns-wide,  14em, 2.25em, 5.5em, 1.75em,   1.2em, 5px, 3px, 8px, $max-width-wide);
+@include max-query(1280px, $columns-wide,  12em,    2em, 5.5em, 1.75em, 1.125em, 3px, 2px, 6px, $max-width-wide);
+@include max-query(1194px, $columns-wide,  12em,    2em, 5.5em, 1.75em,     1em, 3px, 2px, 6px, $max-width-narrow);
+@include max-query(1024px, $columns-wide,  12em,    2em, 5.5em, 1.75em,     1em, 3px, 2px, 6px, $max-width-narrow);
+@include max-query( 896px, $columns-wide,   8em,  1.5em, 4.5em,  1.5em,     1em, 3px, 1px, 4px, $max-width-narrow);
+@include max-query( 667px, $columns-narrow, 5em,    1em,   3em, 1.25em,     1em, 2px, 1px, 2px, $max-width-narrow);
+@include max-query( 320px, $columns-narrow, 4em,    1em,   2em, 1.25em,     1em, 2px, 1px, 2px, $max-width-narrow);
 
 // iPhone
 @media only screen and (max-width : 667px) and (orientation: landscape) {
-  scroll-page:first-child .next {
-    margin-bottom: 2em;
+  scroll-page {
+    padding: $padding;
+  }
+
+  scroll-page:first-child {
+    padding: $page-padding 0;
+    &.next {
+      margin-bottom: 4em;
+    }
   }
 }
 
 @media only screen and (max-width : 667px) and (orientation: portrait) {
-  scroll-page:first-child .next {
-    margin-bottom: 4em;
+  scroll-page {
+    padding: $padding;
+  }
+
+  scroll-page:first-child {
+    padding: 0;
+
+    &.next {
+      margin-bottom: 4em;
+    }
   }
 }
 

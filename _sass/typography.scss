@@ -1,0 +1,39 @@
+h1 {
+  filter: drop-shadow(2px 2px 0 $color-drop-shadow);
+  font-family: "BadaBoom", sans-serif;
+  margin-bottom: 0.25em;
+  padding-left: 5px;
+  transform: rotate(-2.5deg);
+}
+
+h2 {
+  color: $color-secondary;
+  font-family: "MonoHand", sans-serif;
+  text-transform: uppercase;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+a {
+  color: $color-primary;
+  display: inline-block;
+  text-decoration: none;
+
+  &:hover {
+    animation: swell 0.5s ease 1;
+  }
+}
+
+section {
+  a {
+    color: $color-primary;
+    display: inline-block;
+    text-decoration: underline;
+
+    &:hover {
+      color: $color-secondary;
+    }
+  }
+}

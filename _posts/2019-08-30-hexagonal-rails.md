@@ -4,7 +4,7 @@ title: Hexagonal Rails
 subtitle: Architecturally sound. Rapid application development.
 slug: hexagonal-rails
 date: 2019-08-30 16:11:00
-tags: [oop, architecture, design, patterns]
+topics: [oop, architecture, design, patterns]
 ---
 Ruby on Rails is famous for rapid application development. It is super quick and easy to setup a Rails application with some basic functionality. So much so, that Rails was the darling of startups for years.
 

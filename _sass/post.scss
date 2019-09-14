@@ -1,0 +1,11 @@
+.topics {
+  margin-bottom: calc(#{$padding});
+
+  .topic {
+    background-color: $color-secondary;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-right: calc(#{$padding} / 4);
+    padding: calc(#{$padding} / 4);
+  }
+}

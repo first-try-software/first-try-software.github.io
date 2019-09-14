@@ -1,5 +1,4 @@
 #about {
-  border-bottom: none;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -7,7 +6,7 @@
   header {
     background-color: $background-color-header;
     border-radius: 50%;
-    margin: $padding-default auto;
+    margin: $padding auto;
 
     h1 {
       margin: 0 auto;
@@ -27,6 +26,7 @@
     font-size: 1em;
     justify-content: end;
     margin: 0 2em 3em;
+    position: relative;
     width: 13em;
 
     h1 {
@@ -42,6 +42,10 @@
       border: 3px solid $color-primary;
       border-radius: 3px;
       margin: 0.5em 0;
+
+      &:hover {
+        animation: swell 0.5s ease 1;
+      }
 
       &:hover + .bubble {
         display: flex;
@@ -72,7 +76,7 @@
     font-size: 1em;
     height: 9em;
     justify-content: center;
-    position: relative;
+    position: absolute;
     text-align: center;
     text-transform: uppercase;
     top: -2.5em;
@@ -87,18 +91,21 @@
   }
 
   .bubble-down {
+    margin-top: 18.75em;
     left: -6.5em;
+    position: absolute;
     transform: rotate(15deg);
   }
 
   .bubble-up {
-    right: -1.5em;
+    margin-top: 18.75em;
+    left: 2.5em;
     transform: rotate(-15deg);
   }
 
   .bubble-middle {
-    right: 2em;
-    top: -2em;
+    margin-top: 18.75em;
+    left: -2em;
   }
 
   .bubble-down:before {

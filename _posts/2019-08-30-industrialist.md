@@ -4,7 +4,7 @@ title: The Factory Pattern
 subtitle: Factories build things. Industrialist builds factories.
 slug: industrialist
 date: 2019-09-02 16:23:00
-tags: [oop, factory, design, patterns, design-patterns, gem, industrialist]
+topics: [oop, factory, design, patterns, design-patterns, gem, industrialist]
 ---
 In object oriented design, a factory is a method or class whose only responsibility is to build objects of a particular type. So, an AutomobileFactory would be responsible for building Automobile objects.
 
