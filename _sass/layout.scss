@@ -18,13 +18,12 @@ scroll-page:nth-child(even) {
 }
 
 scroll-page:last-child {
-  min-height: calc(#{$min-height} - calc(#{$margin} * 2) - #{$bang-height})
+  padding: calc(#{$padding} * 3) $page-padding $padding;
 }
 
 article {
   margin: 0 auto;
   max-width: $max-width-wide;
-  // width: calc(#{$max-width-narrow} - calc(#{$padding} * 6));
 }
 
 section {

@@ -29,25 +29,27 @@ title: First Try!
       {% endif %}
     </scroll-page>
   {% endfor %}
-
   <scroll-page id="about">
-    <header>
-      <h1>Our Heroes!</h1>
-    </header>
-    <section class="bios">
-      {% assign i = 0 %}
-      {% for hero in site.data.heroes %}
-        {% assign mod = i | modulo: 3 %}
-        {% assign bubble = site.data.bubbles[mod].name %}
-        <div class="bio">
-          <h1>{{ hero.first_name }}!</h1>
-          <h2>The {{ hero.title }}.</h2>
-          <img src="images/{{ hero.slug }}.jpg" width="200" height="200" alt="{{ hero.first_name }} {{ hero.last_name }}">
-          <div class="bubble {{ bubble }}">{{ hero.quote }}</div>
-        </div>
-        {% assign i = i | plus: 1 %}
-      {% endfor %}
-    </section>
+    <div class="content">
+      <header>
+        <h1>Our Heroes!</h1>
+      </header>
+      <section class="bios">
+        {% assign i = 0 %}
+        {% for hero in site.data.heroes %}
+          {% assign mod = i | modulo: 3 %}
+          {% assign bubble = site.data.bubbles[mod].name %}
+          <div class="bio">
+            <h1>{{ hero.first_name }}!</h1>
+            <h2>The {{ hero.title }}.</h2>
+            <img src="images/{{ hero.slug }}.jpg" width="200" height="200" alt="{{ hero.first_name }} {{ hero.last_name }}">
+            <div class="bubble {{ bubble }}">{{ hero.quote }}</div>
+          </div>
+          {% assign i = i | plus: 1 %}
+        {% endfor %}
+      </section>
+    </div>
+    <a href="/"><img src="/images/bang.png" width="48" height="48" alt="First Try! Software"></a>
   </scroll-page>
 </scroll-container>
 
