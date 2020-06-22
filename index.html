@@ -37,7 +37,7 @@ title: First Try!
       <section class="bios">
         {% assign i = 0 %}
         {% for hero in site.data.heroes %}
-          {% assign mod = i | modulo: 3 %}
+          {% assign mod = i | modulo: 2 %}
           {% assign bubble = site.data.bubbles[mod].name %}
           <div class="bio">
             <h1>{{ hero.first_name }}!</h1>
