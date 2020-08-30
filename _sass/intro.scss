@@ -1,0 +1,25 @@
+.software {
+  font-family: "MonoHand", sans-serif;
+  font-size: 20px;
+  margin-top: 3em;
+  text-align: center;
+
+  ul {
+    list-style-type: none;
+
+    li {
+      display: inline-block;
+      padding: $padding;
+      text-align: center;
+      text-transform: uppercase;
+
+      .lilbang {
+        width: 20px;
+      }
+
+      .subtext {
+        font-size: 12px;
+      }
+    }
+  }
+}
