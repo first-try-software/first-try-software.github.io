@@ -7,21 +7,21 @@ title: First Try!
     <div class="oval">
       <div class="title">{{ site.name }}</div>
       <div class="tagline">{{ site.tagline }}</div>
-      <div class="software">
-        <ul>
-          {% for pkg in site.data.software %}
-            <li>
-              <img class="lilbang" src="images/bang.png">
-              {{ pkg.name }}<br>
-              <span class="subtext">
-                <a href="{{ pkg.source }}" target="top">{{ pkg.source_name }}</a> |
-                <a href="{{ pkg.download }}" target="top">{{ pkg.download_name }}</a>
-              </span>
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
     </div>
+    <article class="software">
+      <ul>
+        {% for pkg in site.data.software %}
+        <li>
+          <img class="lilbang" src="images/bang.png">
+          {{ pkg.name }}<br>
+          <span class="subtext">
+            <a href="{{ pkg.source }}" target="top">{{ pkg.source_name }}</a> |
+            <a href="{{ pkg.download }}" target="top">{{ pkg.download_name }}</a>
+          </span>
+        </li>
+        {% endfor %}
+      </ul>
+    </article>
     <a class="arrow down bounce-5s" href="#{{ site.posts.first.slug }}"></a>
   </scroll-page>
 

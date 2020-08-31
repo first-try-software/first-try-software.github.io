@@ -15,30 +15,53 @@
 @include max-query(1194px, $columns-wide,  12em,    2em, 5.5em, 1.75em,     1em, 3px, 2px, 6px, $max-width-narrow);
 @include max-query(1024px, $columns-wide,  12em,    2em, 5.5em, 1.75em,     1em, 3px, 2px, 6px, $max-width-narrow);
 @include max-query( 896px, $columns-wide,   8em,  1.5em, 4.5em,  1.5em,     1em, 3px, 1px, 4px, $max-width-narrow);
-@include max-query( 667px, $columns-narrow, 5em,    1em,   3em, 1.25em,     1em, 2px, 1px, 2px, $max-width-narrow);
+@include max-query( 812px, $columns-narrow, 5em,    1em,   3em, 1.25em,     1em, 2px, 1px, 2px, $max-width-narrow);
+@include max-query( 768px, $columns-narrow, 8em,  1.5em, 4.5em,  1.5em,     1em, 3px, 1px, 4px, $max-width-narrow);
+@include max-query( 736px, $columns-narrow, 5em,    1em,   3em, 1.25em,     1em, 2px, 1px, 2px, $max-width-narrow);
 @include max-query( 320px, $columns-narrow, 4em,    1em,   2em, 1.25em,     1em, 2px, 1px, 2px, $max-width-narrow);
 
 // iPhone
-@media only screen and (max-width : 667px) and (orientation: landscape) {
+@media only screen and (max-width : 812px) and (orientation: landscape) {
   scroll-page {
     padding: $padding;
+
+    .software {
+      font-size: 16px;
+      padding: $page-padding $padding;
+    }
   }
 
   scroll-page:first-child {
-    padding: $page-padding 0;
+    min-height: calc(100vh - #{$page-padding} - #{$padding});
+    padding: $padding $padding 0;
+
+    .oval {
+      margin: 2vh auto 0;
+    }
+
     &.next {
       margin-bottom: 4em;
     }
   }
 }
 
-@media only screen and (max-width : 667px) and (orientation: portrait) {
+@media only screen and (max-width : 768px) and (orientation: portrait) {
+
   scroll-page {
     padding: $padding;
+
+    .software {
+      font-size: 16px;
+    }
   }
 
   scroll-page:first-child {
-    padding: 0;
+    min-height: calc(100vh - #{$page-margins});
+    padding: 0 $padding;
+
+    .oval {
+      margin: 10vh auto 0;
+    }
 
     &.next {
       margin-bottom: 4em;
