@@ -14,6 +14,22 @@
   source: https://github.com/first-try-software/navigable
   source_name: GitHub
 
+- name: Navigable Router
+  slug: router
+  type: Ruby Gem
+  download: https://rubygems.org/gems/navigable-router
+  download_name: Ruby Gems
+  source: https://github.com/first-try-software/navigable-router
+  source_name: GitHub
+
+- name: Navigable Server
+  slug: server
+  type: Ruby Gem
+  download: https://rubygems.org/gems/navigable-server
+  download_name: Ruby Gems
+  source: https://github.com/first-try-software/navigable-server
+  source_name: GitHub
+
 - name: Ruby Flog
   slug: ruby-flog
   type: VS Code Extension
