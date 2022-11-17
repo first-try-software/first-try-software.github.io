@@ -6,28 +6,12 @@
   source: https://github.com/first-try-software/manufacturable
   source_name: GitHub
 
-- name: Navigable
-  slug: navigable
+- name: Liberty
+  slug: liberty
   type: Ruby Gem
-  download: https://rubygems.org/gems/navigable
+  download: https://rubygems.org/gems/liberty
   download_name: Ruby Gems
-  source: https://github.com/first-try-software/navigable
-  source_name: GitHub
-
-- name: Navigable Router
-  slug: router
-  type: Ruby Gem
-  download: https://rubygems.org/gems/navigable-router
-  download_name: Ruby Gems
-  source: https://github.com/first-try-software/navigable-router
-  source_name: GitHub
-
-- name: Navigable Server
-  slug: server
-  type: Ruby Gem
-  download: https://rubygems.org/gems/navigable-server
-  download_name: Ruby Gems
-  source: https://github.com/first-try-software/navigable-server
+  source: https://github.com/first-try-software/liberty
   source_name: GitHub
 
 - name: Ruby Flog
