@@ -14,14 +14,6 @@
   source: https://github.com/first-try-software/liberty
   source_name: GitHub
 
-- name: Rubyist
-  slug: rubyist
-  type: VS Code Theme
-  download: https://https://marketplace.visualstudio.com/items?itemName=first-try-software.rubyist
-  download_name: VS Code Marketplace
-  source: https://github.com/first-try-software/rubyist
-  source_name: GitHub
-
 - name: Ruby Flog
   slug: ruby-flog
   type: VS Code Extension
@@ -38,3 +30,10 @@
   source: https://github.com/first-try-software/vs-code-coverage-status
   source_name: GitHub
 
+- name: Rubyist
+  slug: rubyist
+  type: VS Code Theme
+  download: https://https://marketplace.visualstudio.com/items?itemName=first-try-software.rubyist
+  download_name: VS Code Marketplace
+  source: https://github.com/first-try-software/rubyist
+  source_name: GitHub
